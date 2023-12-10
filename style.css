@@ -1,0 +1,56 @@
+body {
+    margin: 0 8px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgba(4,151,8,0.10);
+}
+
+#Neboer {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: grab;
+    background-color: aqua;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    background-image: url("Neboer.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.top {
+    flex: 0.2;
+}
+
+.control {
+    flex: 0.1;
+    display: flex;
+    flex-direction: column;
+    border: aqua solid 5px;
+    border-radius: 20%;
+    margin-bottom: 5px;
+    align-items: center
+}
+
+.text {
+    text-align: center;
+}
+
+#Neboer_container {
+    border:5px solid black;
+    display: flex;
+    flex: 0.69;
+}
+
+.zy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center
+}
+
+.speedctl {
+    margin: 10px 50px;
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neboer_Ball</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+<div class="top">
+    <h1 class="text">先锋网实验：Neboer球的弹性测试</h1>
+    <p class="text">实验方法：</p>
+    <p class="text">通常情况下，Neboer球会自然下落。你可以点击”时间静止“按钮，来暂时强迫Neboer球处于同一位置，方便手动拖动。</p>
+    <p class="text">你也可以在输入框中输入速度数据，然后点击方向按钮来给Neboer球一个方向速度。</p>
+    <p class="text">建议在时间静止的情况下操作拖动，拖动出界的判定今天做不完了，之后补一下。</p>
+    <p class="text" style="color: red;">速度输入过大的话会瞬间跑到框外面，于是会导致bug，可以尝试一下之后刷新。手机端目前尚未适配！！！</p>
+    <p class="text">至于更多的操作细节，请你充分发挥作为一个先锋人的探索精神，自行探索吧。</p>
+</div>
+
+<div class="control">
+    <p id="notice" class="text" style="flex: 0.5">实验提示器：目前未设置速度</p>
+
+    <div class="zy">
+        <div>
+            <button id="theworld" style="width: 100px;height: 100px" onclick="freeze()">时间静止！</button>
+        </div>
+        <div style="display: flex;flex-direction: column;">
+        <input type="text" id="speed" class="speedctl" placeholder="横向右为正，纵向下为正">
+        <button class="speedctl" onclick="speed_get(0)">设置为横向速度</button>
+        <button class="speedctl" onclick="speed_get(1)">设置为纵向速度</button>
+        <button class="speedctl" onclick="speed_init()">重置速度</button>
+        </div>
+    </div>
+</div>
+
+<div id="Neboer_container">
+    <div id="Neboer"></div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
